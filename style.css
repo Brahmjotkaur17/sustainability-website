@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+:root{
+	--green:#16a085;
+	--black:#444;
+	--light-color:5rem .5rem 0 rgba(22,160,133,.2);
+	--text-shadow:4rem .4rem 0 rgba(0,0,0,.2);
+	--border:.2rem solid var(--green);
+}
+*{
+	font-family: 'Poppins',sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-transform: capitalize;
+	transition: all .2s ease-out;
+	text-decoration: none;
+}
+html{
+	overflow-x: hidden;
+	scroll-padding-top: 7rem;
+	scroll-behavior: smooth;
+}
+
+.header{
+	padding: 1.5rem 9%;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #fff;
+}
+
+.header .navbar a{
+	font-size: 1.7 rem;
+	color: var(--light-color);
+	margin-left: 2rem;
+}
+
+.header .navbar a:hover{
+	color:var(--green) ;
+	cursor: pointer;
+}
+
+.emission_calc{
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.emission_calc .heading{
+	margin-top: 2rem;
+	margin-left: 5rem;
+}
+
+.emission_calc form{
+	flex: 1 1 45rem;
+	background: #fff;
+	border: var(--border);
+	text-align: center;
+	padding: 2rem;
+	margin-top: 1rem;
+	margin-left: 5rem;
+	margin-right: 5rem;
+	border-radius: 3rem;
+}
+#results {
+	margin-top: 2em;
+	margin-right: 5rem;
+	margin-left: 5rem;
+	padding: 1em;
+	background-color: #fff;
+	border-radius: 5px;
+	align-self: center;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#chart{
+	display: flex;
+	justify-content: center;
+}
+#chart_div{
+	display: flex;
+	justify-content: center;
+}
+#submit{
+	padding: 0.25rem;
+	border-radius: 0.25rem;
+	border: var(--border);
+	color:#fff ;
+	background-color: var(--green);
+	cursor: pointer;
+}
+#submit:hover{
+	color:var(--green) ;
+	border: var(--border);
+	background-color: #fff;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+#add-country{
+	border: var(--border);
+	background-color: #fff;
+	color: var(--green);
+	padding: 0.25rem;
+	border-radius: 0.5rem;
+}
+#add-country:hover{
+	color:#fff ;
+	background-color: var(--green);
+	cursor: pointer;
+}

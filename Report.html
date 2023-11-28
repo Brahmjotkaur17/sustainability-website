@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Carbon Emissions Report</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+        :root{
+            --green:#16a085;
+            --black:#444;
+            --light-color:5rem .5rem 0 rgba(22,160,133,.2);
+            --text-shadow:4rem .4rem 0 rgba(0,0,0,.2);
+            --border:.2rem solid var(--green);
+        }
+        *{
+            font-family: 'Poppins',sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            transition: all .2s ease-out;
+            text-decoration: none;
+        }
+        .heading{
+            padding: 1.5rem 9%;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+        }
+        .intro{
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+        .basic{
+            padding: 1.5rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            border: var(--border);
+            border-radius: 2rem;
+        }
+        .compare{
+            margin-top: 0.5rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+        .perstu{
+            margin-top: 0.5rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+        .offset{
+            margin-top: 0.5rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+        .model{
+            margin-top: 0.5rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">Carbon Emission Report</h1>
+    <br>
+    <div class="intro">This report will provide a detailed analysis on the carbon footprint generation through air travel by the international students this year. In order to achieve the goal of net zero carbon emissions by 2050, we will have to work hard to promote sustainable practices at both personal and institutional levels.<br><br>
+        The analysis has been done of basis of a few assumptions : 
+        <ul>
+            <li>International Students travel fly just once from their home country to dublin annually. But in reality, the frequency of travel is usually more.</li>
+            <li> All Students travel in the economy class. In reality, this could be true for majority students but not all.</li>
+        </ul>
+        <br>
+        To get more information about how flight travel generate carbon footprint, press the <a href="https://www.bbc.com/future/article/20200218-climate-change-how-to-cut-your-carbon-emissions-when-flying" target="_blank">link.</a></div>
+    <br>
+    <div class="basic">
+        <p id="result"></p>
+        <p id="numstudents"></p>
+        <p id="difference"></p>
+    </div>
+    <div class="compare">
+        <p> The following bar graph compares the calculated carbon emission to the international student travel emissions of previous year at TCD and UCD. These Universities are amongst the top international Universities in Ireland.</p>
+        <p id="chart"></p>
+    </div>
+    <div class="perstu">
+        <p id="emperpass"></p>
+        <p id="chart_perstu"></p>
+    </div>
+    <br>
+    <div class="model">
+        <label for="slider">Slider to adjust the percentage of students to see the change in the carbon footprint: </label><br>
+        <input type="range" id="slider" name="slider" min="-100" max="100" value="0">
+        <p><span id="slider-value"></span></p>
+    </div>
+    <br>
+    <div class="offset">
+        <p>In order to reach zero-emission, some measures can be taken to offset this emission. </p>
+        <ol>
+            <li><p id="numTrees"></p></li>
+            <li><p id="emmcompare"></p></li>
+        </ol>
+    </div>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="report.js" type="module"></script>
+  </body>
+</html>
